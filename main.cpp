@@ -28,7 +28,7 @@ while( !infile.eof() )
   {
   in>>current;
 //  list.push_back(current); 
-  if( current >= 'a' || current <= 'z' || current >= 'A' || current <= 'Z')
+  if( current >= 'a' && current <= 'z' || current >= 'A' && current <= 'Z')
   {
 //  list.push_back(current);
 //for(int i = 0; i < list.size(); i++)
