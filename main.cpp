@@ -1,38 +1,20 @@
 //Author: Cristina Perez
 #include <iostream>
 #include <fstream>
-#include <vector>
 using namespace std;
 
 int main()
 {
  
 char first = ' ', last = ' ', current;
-/*
-fstream infile;
-vector<char> list;
 
-infile.open("example.txt");
-
-if( infile.is_open() )
-{
-
-while( !infile.eof() )
-{
-  infile>>
-*/
   ifstream in;
   in.open("example.txt");
-  vector <char> list;  
   while( !in.eof() )
   {
-  in>>current;
-//  list.push_back(current); 
+  in>>current; 
   if( current >= 'a' && current <= 'z' || current >= 'A' && current <= 'Z')
   {
-//  list.push_back(current);
-//for(int i = 0; i < list.size(); i++)
-//{
 if( first == ' ')
 {
   first = current;
