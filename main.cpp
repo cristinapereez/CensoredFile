@@ -7,8 +7,7 @@ using namespace std;
 int main()
 {
  
-char first;
-char last;
+char first = ' ', last = ' ', current;
 /*
 fstream infile;
 vector<char> list;
@@ -22,20 +21,34 @@ while( !infile.eof() )
 {
   infile>>
 */
-  char letter;
   ifstream in;
   in.open("example.txt");
   vector <char> list;
-  in>>letter;
-  list.push_back(letter);
-  
-  if( letter >= 'a' || letter <= 'z' || letter >= 'A' || letter <= 'Z')
+  if( in.is_open() )
+  {  
+  while( !in.eof() )
   {
-  for(int i = 0; i < list.size(); i++)
+  in>>current;
+//  list.push_back(current); 
+  if( current >= 'a' || current <= 'z' || current >= 'A' || current <= 'Z')
   {
-  char first = list[i] ,
-  last = list[ list.size()-1] ,  current;
+//  list.push_back(current);
+//for(int i = 0; i < list.size(); i++)
+//{
+if( first == ' ')
+{
+  first = current;
+}
+else
+{
+last = current;
   }
+  }
+  }
+  }
+  else
+  {
+  in.close();
   }
   //Read from the file opened by in, and the first letter (either upper or
   //lower case) should be assigned to first and the last letter (again in
