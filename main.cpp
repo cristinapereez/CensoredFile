@@ -23,9 +23,7 @@ while( !infile.eof() )
 */
   ifstream in;
   in.open("example.txt");
-  vector <char> list;
-  if( in.is_open() )
-  {  
+  vector <char> list;  
   while( !in.eof() )
   {
   in>>current;
@@ -44,11 +42,10 @@ else
 last = current;
   }
   }
-  }
-  }
   else
   {
   in.close();
+  }
   }
   //Read from the file opened by in, and the first letter (either upper or
   //lower case) should be assigned to first and the last letter (again in
